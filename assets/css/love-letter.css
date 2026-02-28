@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Montserrat:wght@300;500&display=swap');
+
+* {
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+  font-feature-settings: "zero", "cv03";
+  scrollbar-width: auto;
+	scrollbar-gutter: stable;
+  scrollbar-width: thin;
+}
+*::-webkit-scrollbar {
+  width: 0.3em;
+}
+*::-webkit-scrollbar-track {
+  background: var(--scroll-track);margin-bottom: 0.75em;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);border-radius: 16px;
+}
+
+:root {
+  --primary-pink: #ffafbd;
+  --secondary-pink: #ffc3a0;
+  --deep-pink: #d81b60;
+  --soft-text: #880e4f;
+  --queen-diary: #63434a;
+  --scroll-track: #ffdee9;
+  --scroll-thumb: #c94e86;
+  --white-glass: rgba(255, 255, 255, 0.3);
+  --bg-gradient: linear-gradient(135deg, #ffdee9 30%, #ffffff 100%);
+  --text-gradient: linear-gradient(to right, #d81b60, #7d1d3f);
+
+  --font-queen: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --dark-accent: #4a0e1c;
+}
+::selection {
+  background-color: #C94E86;color: #FFE3F6;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-body);
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--dark-accent);
+  cursor: default;
+}
+.celestial {
+	margin: 0 auto;
+	padding: 20px;
+	min-height: 100vh;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 100%;
+}
+
+.celestial .queen {
+  margin: 0 auto;
+  max-width: 116rem;
+  width: 100%
+}
+
+.celestial .castle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.celestial .queen {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.celestial .queen-chamber {
+    line-height: 1;
+    margin: 0 auto 1em;
+}
+.queen-chamber .queen-name {
+  font-family: var(--font-queen);
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+    background: var(--text-gradient);
+    background-clip: text;
+    font-size: 1.5em;
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.queen-chamber .queen-diary {
+  font-family: var(--font-queen);
+  font-style: italic;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--soft-text);
+  margin: 10px 0 20px;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+.queen-letter {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--soft-text);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.queen-letter:hover {
+    color: var(--deep-pink);
+}
+
+.constellation {
+    margin: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    line-height: 0;
+}
+
+.constellation a img {
+  display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(255, 182, 193, 0.4); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 5px solid var(--white-glass);
+}
+
+.constellation a:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(255, 182, 193, 0.4); 
+    filter: brightness(1.1);
+}
+
+@media (min-width: 576px) {
+	.celestial {
+		margin: 0 10%;
+		padding: 0 20px 0 20px;
+	}
+}
+@media (min-width: 768px) {
+	.celestial {
+		margin: 0 10%;
+		padding: 0 20px 0 20px;
+    margin-bottom:-6.67vw;
+	}
+  .queen-chamber .queen-name {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+	.celestial {
+		max-width: 450px;
+		margin: 0 auto;
+		padding: 20px 0 20px 0;
+	}
+}
