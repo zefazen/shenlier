@@ -13,4 +13,4 @@
 <br>
 
 trims,<br>
-[RayysFeelDreams](https://github.com/feeldreams) | [CalebMiller](https://cmiller.tech/)
+[RayysFeelDreams](https://github.com/feeldreams) | [CalebMiller](https://cmiller.tech/) | [CSSScript](https://www.cssscript.com/read-more-large-text-block/) | [FlorinPop](https://codepen.io/FlorinPop17/pen/eYYYErv)
